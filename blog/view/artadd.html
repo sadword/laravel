@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<title>虚颜发表</title>
+<link href="./view/css/style.css" rel='stylesheet' type='text/css' />
+<style>
+#inp{width: 342px;height: 55px;background: #fff;line-height: 55px;border-radius: 5px;}
+#se{width: 80px;height: 55px;background: #fff;line-height: 55px;border-radius: 5px;}
+#a{float: left;}
+</style>
+<!--//webfonts-->
+</head>
+<body>
+	<h1>虚颜文章</h1>
+	<div class="login-01">
+			<form action="artadd.php" method="post" enctype="multipart/form-data">
+				<ul>
+				<li class="first">
+					<a href="#" class=" icon user"></a><input type="text" class="text" name="name" value="文章名" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}" >
+					<div class="clear"></div>
+				</li>
+				<li class="first">
+					<a href="#" class=" icon email"></a><input type="text" name="email" class="text" value="邮箱" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}" >
+					<div class="clear"></div>
+				</li>
+				<li class="second">
+				<a href="#" class=" icon msg"></a><textarea value="文章" name="content" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}">文章</textarea>
+				<div class="clear"></div>
+				</li>
+				<li class="first">
+					<a href="#" class=" icon email"></a><input id="inp" type="file" name="pic" class="text" value="图片" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}" >
+					<span>栏目</span>
+					<select name="cat_id" id="se">
+					<?php foreach($catlist as $v){?>
+						<option value="<?php echo $v['cat_id'];?>"><?php echo $v['catname'];?></option>
+					<?php }?>
+					</select>
+					<div class="clear"></div>
+				</li>
+			</ul>
+			<input type="submit" onClick="myFunction()" value="发布" >
+			<div class="clear"></div>
+		</form>
+</div>
+	<!--start-copyright-->
+   		<div class="copy-right">
+   			<div class="wrap">
+				<p>Copyright &copy; 2015 虚颜</p>
+		</div>
+	</div>
+	<!--//end-copyright-->
+</body>
+</html>

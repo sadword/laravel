@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<!-- <meta charset="utf-8"> -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<title>花气袭人是酒香</title>
+<meta name="Keywords" content="" >
+<meta name="Description" content="" >
+<link href="./view/css/index.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+  <h1><a href="/">花气袭人是酒香</a></h1>
+  <p>这夏天里流动的风情，是停不住的舞步和唱不完的情歌，当玫瑰花瓣飘飞的那一刻，风会带走所有的想念.......</p>
+</header>
+<div class="navswf">
+<object id="customMenu" data="./view/images/nav.swf" width="528" height="70" type="application/x-shockwave-flash"><param name="allowScriptAccess" value="always"><param name="allownetworking" value="all"><param name="allowFullScreen" value="true"><param name="wmode" value="transparent"><param name="menu" value="false"><param name="scale" value="noScale"><param name="salign" value="1">
+</object>
+<div id="nav">
+     <ul>
+       <li><a href="index.php" >网站首页</a></li>
+        <li><a href="#" target="_blank" title="慢生活">虚颜文采</a></li>
+       <!--  <li><a href="/jstt/" target="_blank" title="技术探讨">技术探讨</a></li>
+        <li><a href="/download/" target="_blank" title="个人网站模板">网站模板</a></li>
+        <li><a href="/newstalk/" target="_blank" title="碎言碎语">碎言碎语</a></li> -->
+       <li><a href="" target="_blank" title="虚颜相册">虚颜相册</a></li>
+       <li id="log"><a href="regist.php" target="_blank" title="注册">注册</a></li>
+       <li id="log"><a href="login.php" target="_blank" title="登录">登录</a></li>
+     </ul>
+     <script src="js/silder.js"></script><!--获取当前页导航 高亮显示标题-->
+</div>
+</div>
+<div class="blank"></div>
+<article>
+<div class="content"> 
+    <div class="bloglist">
+  <!--article begin-->
+  <?php foreach($list as $v){?>
+    <ul>
+    <h2><a title="Web之路，经历了心酸之后" href="artlist.php?art_id=<?php echo $v['art_id'];?>"  target="_blank"><?php echo $v['title'];?></a></h2>
+    <?php echo $v['content'];?>
+    <figure><img src="./view/images/02.jpg"></figure>
+    <p class="dateview"><span><?php echo date('Y-m-d',$v['pubtime']);?></span><span>作者：青</span><span>分类：<a href="/" target="_blank"><?php echo $v['catname'];?></a></span><span>阅读(229)</span><span><a href="liuyan.php">评论(124)</a></span></p>
+    </ul>
+  <?php }?>
+  <!--article end-->
+<!--article begin-->
+    <ul>
+      <p id="list" class="dateview">分页:
+      <?php foreach($res as $k => $v){?>
+        <span><a href="?<?php echo $v;?>"><?php echo $k;?></a></span>
+      <?php }?>
+      </p>
+    </ul>
+  <!--article end-->  
+    </div> 
+  </div>  
+<aside class="navsidebar">
+    <h2><p>个人档案</p></h2>
+   <div class="vcard">
+      <p class="fn">姓名：虚颜</p>
+      <p class="nickname">网名：Koala | 南烟斋笔录</p>
+      <p class="url">主页：<a href="http://www.yangqq.com" target="_blank">www.yangqq.com</a></p>
+      <p class="address">现居：北京市昌平区</p>
+      <p class="role">职业：软件开发、高级HR</p>
+    </div>   
+   <h2><p>博客分类</p></h2>
+<ul class="news">
+<?php foreach($catlist as $v){?>
+  <li><a href="catlist.php?cat_id=<?php echo $v['cat_id'];?>"><?php echo $v['catname'];?>(<?php echo $v['num'];?>)</a></li>
+<?php }?>
+</ul>
+<h2><p>近期文章</p></h2>
+<ul class="news">
+<?php foreach($artlist as $v){?>
+  <li><a href="artlist.php?art_id=<?php echo $v['art_id'];?>"><?php echo $v['title'];?></a></li>
+<?php }?>
+</ul>
+<h2><p>文章归档</p></h2>
+<ul class="news">
+  <li><a href="#">2008 年三月</a></li>
+  <li><a href="#">2008 年四月</a></li>
+  <li><a href="#">2008 年六月</a></li>
+</ul>
+<h2><p>友情链接</p></h2>
+<ul class="news">
+  <li><a target="blank" href="https://user.qzone.qq.com/249882747/infocenter?ptsig=14Sckms0aCBE*HoV-IC1Dse-xzigYeFmNfp5gUI*qVA_">青云的空间</a></li>
+    <li><a target="blank" href="http://down.admin5.com/">源码库</a></li>
+</ul>
+</aside>
+</article>
+<div id="copright">Design by <a href="http://www.yangqq.com" target="_blank">DanceSmile</a></div>
+</body>
+</html>

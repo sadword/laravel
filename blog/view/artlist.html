@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<!-- <meta charset="utf-8"> -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<title>琥珀-虚颜文采</title>
+<meta name="Keywords" content="" >
+<meta name="Description" content="" >
+<link href="./view/css/index.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<header>
+  <h1><a href="/">琥珀-虚颜文采</a></h1>
+  <p>玉生烟 笑我悲结于心 生死两境 此情可孚再无佳期.......</p>
+</header>
+<div class="navswf">
+<object id="customMenu" data="./view/images/nav.swf" width="528" height="70" type="application/x-shockwave-flash"><param name="allowScriptAccess" value="always"><param name="allownetworking" value="all"><param name="allowFullScreen" value="true"><param name="wmode" value="transparent"><param name="menu" value="false"><param name="scale" value="noScale"><param name="salign" value="1">
+</object>
+<div id="nav">
+     <ul>
+       <li><a href="index.php" >网站首页</a></li>
+        <li><a href="/download/" target="_blank" title="个人网站模板">虚颜管理</a></li>
+        <li><a href="catadd.php" target="_blank" title="碎言碎语">虚颜栏目</a></li>
+       <li><a href="artadd.php" target="_blank" title="留言版">虚颜文章</a></li>
+       <li id="log"><a href="regist.php" target="_blank" title="注册">注册</a></li>
+       <li id="log"><a href="login.php" target="_blank" title="登录">登录</a></li>
+     </ul>
+     <script src="js/silder.js"></script><!--获取当前页导航 高亮显示标题-->
+</div>
+</div>
+<div class="blank"></div>
+<article>
+<div class="content"> 
+    <div class="bloglist">
+  <!--article begin-->
+  <?php foreach($artlist as $v){?>
+    <ul>
+    <h2><a title="Web之路，经历了心酸之后" href="/"  target="_blank"><?php echo $v['title'];?></a></h2>
+    <?php echo $v['content'];?>
+    <figure><img src="./view/images/02.jpg"></figure>
+    <p class="dateview"><span>2013-05-11</span><span>作者：青</span><span>分类：<a href="/" target="_blank">心得笔记</a></span><span>阅读(229)</span><span><a href="liuyan.php?art_id=<?php echo $v['art_id'];?>">留言(124)</a></span></p>
+    </ul>
+    <?php }?>
+  <!--article end-->
+<!--article begin-->
+  <?php foreach($lm as $v){?>
+    <ul>
+      <h2><?php echo $v['nick']?></h2>
+      <?php echo $v['content']?>
+    </ul>
+    <?php }?>
+  <!--article end-->  
+    </div> 
+  </div>  
+<aside class="navsidebar">
+    <h2><p>个人档案</p></h2>
+   <div class="vcard">
+      <p class="fn">姓名：虚颜</p>
+      <p class="nickname">网名：Koala | 南烟斋笔录</p>
+      <p class="url">主页：<a href="http://www.yangqq.com" target="_blank">www.yangqq.com</a></p>
+      <p class="address">现居：北京市昌平区</p>
+      <p class="role">职业：软件开发、高级HR</p>
+    </div>   
+   <h2><p>博客分类</p></h2>
+<ul class="news">
+<?php foreach($catlist as $v){?>
+  <li><a href="/"><?php echo $v['catname'];?>(3)</a></li>
+<?php }?>
+</ul>
+<h2><p>近期文章</p></h2>
+<ul class="news">
+  <li><a href="/">女孩都有浪漫的小情怀</a></li>
+  <li><a href="/">也许下个路口就会遇见希望</a></li>
+  <li><a href="/">6月毕业季，祝福送给你</a></li>
+  <li><a href="/">生活常有缺席的-可搞笑从来不缺席</a></li>
+  <li><a href="/">为了一个不存在的梦，执念了那么多年</a></li>
+  <li><a href="/">妹妹，明天你就要嫁人啦</a></li>
+</ul>
+<h2><p>文章归档</p></h2>
+<ul class="news">
+  <li><a href="/">2008 年三月</a></li>
+  <li><a href="/">2008 年四月</a></li>
+  <li><a href="/">2008 年六月</a></li>
+</ul>
+<h2><p>友情链接</p></h2>
+<ul class="news">
+  <li><a href="http://www.yangqq.com">青云个人博客</a></li>
+    <li><a href="http://www.aspku.com">源码库</a></li>
+</ul>
+</aside>
+</article>
+<div id="copright">Design by <a href="http://www.yangqq.com" target="_blank">DanceSmile</a></div>
+</body>
+</html>

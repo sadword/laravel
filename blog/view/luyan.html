@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<title>留言板</title>
+<link href="./view/css/style.css" rel='stylesheet' type='text/css' />
+<!--//webfonts-->
+</head>
+<body>
+	<h1>花气袭人是酒香</h1>
+	<div class="login-01">
+			<form action="" method="post">
+				<ul>
+				<li class="first">
+					<a href="#" class=" icon user"></a><input type="text" class="text" name="name" value="姓名" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}" >
+					<div class="clear"></div>
+				</li>
+				<li class="first">
+					<a href="#" class=" icon email"></a><input type="text" name="email" class="text" value="邮箱" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}" >
+					<div class="clear"></div>
+				</li>
+				<li class="second">
+				<a href="" class=" icon msg"></a><textarea value="留言" name="content" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}">留言</textarea>
+				<div class="clear"></div>
+				</li>
+			</ul>
+			<input type="submit" onClick="myFunction()" value="提交" >
+			<div class="clear"></div>
+		</form>
+</div>
+	<!--start-copyright-->
+   		<div class="copy-right">
+   			<div class="wrap">
+				<p>Copyright &copy; 2015 留言板</p>
+		</div>
+	</div>
+	<!--//end-copyright-->
+</body>
+</html>

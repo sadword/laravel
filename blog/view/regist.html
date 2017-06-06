@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册界面</title>
+	<style>
+	body {
+font-family:"Microsoft Yahei";
+font-size:15px;
+color:#e05167;
+margin:0;
+background: #e8dfd8 url(../images/top.jpg) 50% top scroll no-repeat;}
+.bottom{text-align:center;height:65px;border-top:2px dashed #c5bcb3;margin-top: 130px;}.bottom p{color:#673859;display:block;margin-top:30px;}.bottom p a{text-decoration:none;color:#673859;}
+.bottom p a:hover{color:#f47b90;}
+.login_bd{
+width: 568px;
+overflow: auto;
+margin:0 auto;
+box-sizing: border-box;
+margin-top: 50px;
+padding: 40px 50px;
+border-top: 0;
+}
+.login_bd h2{width: 480px;display: block;text-align: center;font-family: '楷体';font-size: 36px;}
+ul{list-style-type: none;}
+.login_form .txt {
+width: 295px;
+height: 20px;
+padding: 5px;
+border: 1px solid #ccc;
+}
+p{font-size: 12px;color:#ff00e0;}
+#zc{width: 307px;
+height: 34px;
+border: 0;
+background: url(../images/login_img.png) 0 0 no-repeat;
+cursor: pointer;}
+
+
+	</style>
+</head>
+<body>
+	
+		<div class="login_bd">
+			<h2>用户注册</h2>
+			<div class="login_form fl">
+				<form action="" method="post">
+					<ul>
+						<li>
+							<label for="">用户名：</label>&nbsp;&nbsp;&nbsp;
+							<input type="text" class="txt" name="username" />
+							
+							<p>3-20位字符，可由中文、字母、数字和下划线组成</p>
+						</li>
+						<li>
+							<label for="">密&nbsp;&nbsp;&nbsp;码：</label>&nbsp;&nbsp;&nbsp;
+							<input type="password" class="txt" name="password" />
+							<p>6-20位字符，可使用字母、数字和符号的组合，不建议使用纯数字、纯字母、纯符号</p>
+						</li>
+						<li>
+							<label for="">确认密码：</label>
+							<input type="password" class="txt" name="cfpwd" />
+							<p> <span>请再次输入密码</p>
+						</li>
+						<li class="checkcode">
+							<label for="">验证码：&nbsp;&nbsp;&nbsp;</label>
+							<input type="text"  name="checkcode" />
+							<img id="imgs" src="images/checkcode1.jp" alt="" />
+							<span>看不清？<a href="">换一张</a></span>
+						</li><br>
+						<li>
+							<label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</label>
+							<input type="checkbox" class="chb" checked="checked" />我已阅读并同意《用户注册协议》
+						</li>
+						<li>
+							<label for="">&nbsp;</label>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="zc" type="submit" value="" class="login_btn" />
+						</li>
+					</ul>
+				</form>
+
+				</div>
+			</div>
+	<footer class="bottom">
+		<p>Copyright &copy; 2017 · GeneratePress · WordPress<br>
+		<a href="">地址:北京市昌平区布尔教育28期青云童学 邮箱:vip18801115032@163.com</a></p>
+	</footer>
+			
+	
+
+</body>
+</html>
